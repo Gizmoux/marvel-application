@@ -9,9 +9,9 @@ import {
   CiLogin,
   CiLogout,
   CiHeart,
-  CiMenuFold,
   CiMenuBurger,
 } from "react-icons/ci";
+import { AiOutlineClose } from "react-icons/ai";
 
 const Navbar = () => {
   const { data: session } = useSession();
@@ -50,7 +50,7 @@ const Navbar = () => {
             className="text-white focus:outline-none"
           >
             {isMenuOpen ? (
-              <CiMenuFold className="w-8 h-8" />
+              <AiOutlineClose className="w-8 h-8" />
             ) : (
               <CiMenuBurger className="w-8 h-8" />
             )}
