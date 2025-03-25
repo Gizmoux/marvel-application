@@ -18,11 +18,11 @@ const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navItems = [
-    { href: "/characters", label: "CHARACTERS", icon: null },
-    { href: "/comics", label: "COMICS", icon: null },
+    { href: "/characters", label: "Characters", icon: null },
+    { href: "/comics", label: "Comics", icon: null },
     {
       href: "/favourite",
-      label: "FAVORITES",
+      label: "Favorites",
       icon: <CiHeart className="inline-block mr-2" />,
     },
   ];
@@ -90,8 +90,7 @@ const Navbar = () => {
                 "
                 onClick={() => setIsMenuOpen(false)}
               >
-                {item.icon}
-                {item.label}
+                {item.label} {item.icon}
               </Link>
             </li>
           ))}
@@ -177,41 +176,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-// "use client";
-// import Link from "next/link";
-// import logo from "../assets/images/logo.svg";
-// import Image from "next/image";
-// import { signIn, useSession } from "next-auth/react";
-
-// const page = () => {
-//   const { data: session } = useSession();
-//   if (session) {
-//     console.log(session);
-//   }
-//   return (
-//     <div className="flex justify-between bg-black">
-//       <Link href="/">
-//         <Image src={logo} alt="Logo Marvel" className="w-40 h-14 " />
-//       </Link>
-//       <ul className="flex mr-2 items-center">
-//         <Link href="/characters" className="mr-20 text-white">
-//           PERSONNAGES
-//         </Link>
-//         <Link href="/comics" className="mr-20 text-white ">
-//           COMICS
-//         </Link>
-//         <Link href="/favourite" className="mr-20  text-white">
-//           FAVORIS
-//         </Link>
-//         <button onClick={() => signIn("google")} className="text-white mr-20">
-//           Google
-//         </button>
-//         <button onClick={() => signIn("github")} className="text-white">
-//           Github
-//         </button>
-//       </ul>
-//     </div>
-//   );
-// };
-
-// export default page;
